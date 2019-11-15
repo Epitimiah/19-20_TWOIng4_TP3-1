@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.pp{
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:90px;
+    height:90px;
+}
+.style{
+    float: right;
+}
+.infos{
+    width: 50%;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px ridge;
+    
+}
+
+.change{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
