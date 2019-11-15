@@ -36,8 +36,8 @@ class Profile extends React.Component {
             post: "Spider-verse 2 : coming soon"
           },
           {
-            nom: 'Kara',
-            prenom: 'Danvers',
+            nom: 'Danvers',
+            prenom: 'Kara',
             ddn: '12 septembre 1977',
             pp: sg,
             background: "grey",
@@ -59,13 +59,15 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="profile">
+        <body>  
         <div className="change">
             <button onClick={() => this.handleClick(0)}>{this.state.profiles[0].prenom}</button>
             <button onClick={() => this.handleClick(1)}>{this.state.profiles[1].prenom}</button>
             <button onClick={() => this.handleClick(2)}>{this.state.profiles[2].prenom}</button>
         </div>
-        <div className="infos">
-            <img src={this.state.profiles[this.state.idUser].pp}></img>
+        
+        <fieldset className="infos">
+            <img className="pp" src={this.state.profiles[this.state.idUser].pp}></img>
             <article>
                 <div className="prenom">
                     <p>{this.state.profiles[this.state.idUser].prenom}</p>
@@ -77,14 +79,14 @@ class Profile extends React.Component {
                     <p>{this.state.profiles[this.state.idUser].ddn}</p>
                 </div>
             </article>
-        </div>
+        </fieldset>
 
-        <div className="publi">
+        <fieldset className="publi">
             <Publication
                 publi={this.state.profiles[this.state.idUser].post}
             />
-        </div>
-        
+        </fieldset>
+        </body>
       </div>
     );
   }
@@ -95,7 +97,7 @@ class Publication extends React.Component{
         return(
             <div>
                 <article>
-                    <p>{this.props.post}</p>
+                    <p>{this.props.publi}</p>
                 </article>
             </div>
         );

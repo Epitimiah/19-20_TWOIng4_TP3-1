@@ -11,49 +11,7 @@ ul {
     flex-direction: row;
 }
 
-.infos{
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    display: inline-block;
-    margin-top: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px ridge;
-    background-color: #999;
-}
-
-.clicked {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #000;
-    background-color: yellow;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .notCliked {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: red;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-
-.img{
+.pp{
     -webkit-border-radius:50px;
     -moz-border-radius:50px;
     border-radius:50px;
@@ -61,11 +19,31 @@ ul {
     height:90px;
 }
 
-.change{
-    position: relative;
-    left: 70%;
+.infos{
+    width: 50%;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border: 2px ridge;
+    background-color: #999;
 }
 
 .publi{
-  background-color: #999;
+    width: 50%;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border: 2px ridge;
+    background-color: #999;  
 }
+
+.change{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
