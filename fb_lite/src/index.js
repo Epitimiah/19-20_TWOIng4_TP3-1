@@ -6,17 +6,6 @@ import sg from './stuff/sg.jpg';
 import steve from './stuff/steve.jpg';
 import { genericTypeAnnotation } from '@babel/types';
 
-
-/*class ButtonStyle extends React.Component {
-  render(){
-    return (
-
-        <button className="style" onClick={this.props.onClick}> Changer Style</button>  
- 
-    );
-  }
-}*/
-
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -53,9 +42,10 @@ class Profile extends React.Component {
 
   handleClick(i) {
     this.setState(
-        {idUser: i
+        {
+          idUser: i
         }
-        );
+    );
   }
 
   changecolor(){
@@ -72,8 +62,6 @@ class Profile extends React.Component {
         }
       );
     }
-    
-    
   }
 
   render() {
@@ -121,6 +109,7 @@ class Publication extends React.Component{
             <div>
                 <article>
                     <p>{this.props.publi}</p>
+                    <button>Super !</button>
                 </article>
             </div>
         );
