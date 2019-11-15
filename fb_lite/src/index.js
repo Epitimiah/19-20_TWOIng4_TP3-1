@@ -7,13 +7,15 @@ import steve from './stuff/steve.jpg';
 import { genericTypeAnnotation } from '@babel/types';
 
 
-function buttonStyle(props) {
+/*class ButtonStyle extends React.Component {
+  render(){
     return (
-    <div className="style">
-        <button className={props.state.button ? "cliked": "notCliked"} onClick={props.handleClick}>Changer Style</button>  
-    </div>
-    )
-}
+
+        <button className="style" onClick={this.props.onClick}> Changer Style</button>  
+ 
+    );
+  }
+}*/
 
 class Profile extends React.Component {
   constructor(props) {
@@ -51,9 +53,27 @@ class Profile extends React.Component {
 
   handleClick(i) {
     this.setState(
-        {idUser: i,
-        button: !this.state.button}
+        {idUser: i
+        }
         );
+  }
+
+  changecolor(){
+    if(this.state.background==="grey"){
+      this.setState(
+        {
+          background:"white"
+        }
+        );
+    } else {
+      this.setState(
+        {
+        background:"grey"
+        }
+      );
+    }
+    
+    
   }
 
   render() {
@@ -66,7 +86,7 @@ class Profile extends React.Component {
             <button onClick={() => this.handleClick(2)}>{this.state.profiles[2].prenom}</button>
         </div>
         
-        <fieldset className="infos">
+        <fieldset className="infos" style={{background : this.state.background}}>
             <img className="pp" src={this.state.profiles[this.state.idUser].pp}></img>
             <article>
                 <div className="prenom">
@@ -78,10 +98,13 @@ class Profile extends React.Component {
                 <div className="ddn">
                     <p>{this.state.profiles[this.state.idUser].ddn}</p>
                 </div>
+                <div>
+                   <button className="style" onClick={()=> this.changecolor()}>Changer style</button>
+                   </div>
             </article>
         </fieldset>
 
-        <fieldset className="publi">
+        <fieldset className="infos" style={{background : this.state.background}}>
             <Publication
                 publi={this.state.profiles[this.state.idUser].post}
             />
